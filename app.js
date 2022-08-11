@@ -2,15 +2,20 @@
 
 // 1. entrada datos usuario para cambiar tema
 const seleccionTema = confirm('¿Deseas el tema oscuro en la landing?....');
-console.log(seleccionTema);
+// console.log(seleccionTema);
 
 // 2. Evaluar la selección del usuario para escoger el tema
-console.log(document.querySelector('body').classList);
-if(seleccionTema) {
-    document.querySelector('body').classList.add('dark');
-    // console.log(document.querySelector('body'));
+// console.log(document.querySelector('body').classList);
+// if(seleccionTema) {
+//     document.querySelector('body').classList.add('dark');
+//     // console.log(document.querySelector('body'));
+// }
+
+// solucion 2
+let main = seleccionTema => {
+    return seleccionTema ? document.querySelector('body').classList.add('dark') : '';
 }
 
-
+main(seleccionTema);
 
 // 3. ejecutar la seleccion
